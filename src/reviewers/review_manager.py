@@ -5,7 +5,7 @@ from typing import List, Dict, Any, Optional
 import os
 import tempfile
 import shutil
-
+from reviewers.llm_reviewer import LLMReviewer
 from github.client import GitHubClient
 from reviewers.style_reviewer import StyleReviewer
 from reviewers.security_reviewer import SecurityReviewer
@@ -30,7 +30,7 @@ class ReviewManager:
         self.style_reviewer = StyleReviewer(config.get('style', {}))
         self.security_reviewer = SecurityReviewer(config.get('security', {}))
         self.quality_reviewer = QualityReviewer(config.get('quality', {}))
-        
+        self.llm_reviewer = LLMReviewer(config.get('llm',{}))
         self.logger.debug("Initialized Review Manager with reviewers")
     
     def review_pull_request(self, pr_number: int, output_mode: str = 'both') -> Dict[str, Any]:
