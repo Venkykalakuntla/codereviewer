@@ -8,12 +8,6 @@ from dotenv import load_dotenv
 # Add the src directory to the Python path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
-# Import the necessary modules
-from utils.logger import setup_logger
-from utils.config import ConfigLoader
-from github.client import GitHubClient
-from reviewers.review_manager import ReviewManager
-
 def main():
     # Load environment variables from .env file
     load_dotenv()
