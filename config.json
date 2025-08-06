@@ -1,0 +1,37 @@
+{
+  "general": {
+    "check_interval": 60,
+    "max_prs_per_run": 10
+  },
+  "style": {
+    "enabled": true,
+    "max_line_length": 100,
+    "indent_size": 4
+  },
+  "security": {
+    "enabled": true,
+    "severity_threshold": "low"
+  },
+  "quality": {
+    "enabled": true,
+    "function_length": 50,
+    "file_length": 500,
+    "complexity": 10
+  },
+  "exclude_patterns": [
+    "node_modules/",
+    "venv/",
+    ".git/",
+    "__pycache__/",
+    "*.min.js",
+    "*.min.css",
+    "*.svg",
+    "*.png",
+    "*.jpg",
+    "*.jpeg",
+    "*.gif",
+    "*.pdf",
+    "*.lock",
+    "package-lock.json"
+  ]
+}
